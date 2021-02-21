@@ -1,0 +1,33 @@
+<dialog id="testDialog" width="300" title="Dialog">
+    <style>
+        .dialog-content {
+            padding: 0px;
+        }
+    </style>
+    <vbox width="100%" style="padding: 5px;">
+        <button text="Button" width="100%" />
+        <tabview width="100%">
+            <vbox text="Page 1" width="100%">
+                <scrollview width="100%" height="300">
+                    <grid columns="3">
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                        
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                        
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                        <button icon="haxeui-core/styles/default/haxeui.png" />
+                    </grid>
+                </scrollview>
+            </vbox>
+            <vbox text="Page 2">
+            </vbox>
+            <vbox text="Page 3">
+            </vbox>
+        </tabview>
+    </vbox>
+</dialog>   

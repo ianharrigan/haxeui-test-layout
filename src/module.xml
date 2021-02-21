@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<module id="haxeui-core" priority="-2" preload="all">
+    <resources>
+        <resource path="assets/icons" prefix="icons" />
+    </resources>
+</module>

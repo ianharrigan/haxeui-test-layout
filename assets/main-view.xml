@@ -1,0 +1,435 @@
+<vbox style="padding: 0px;" styleName="default-background" width="100%" height="100%">
+    
+    <!--
+    <slider id="slider1" width="600" min="0" max="6" pos="3" precision="0" />
+    <slider id="slider2" height="600" min="0" max="6" pos="3" precision="0" direction="vertical" />
+    
+    <hbox>
+        <button text="Set 0" onclick="slider1.pos = 0;slider2.pos = 0;" />
+        <button text="Set 3" onclick="slider1.pos = 3;slider2.pos = 3;" />
+        <button text="Set 5" onclick="slider1.pos = 5;slider2.pos = 5;" />
+    </hbox>    
+    -->    
+    
+    <menubar width="100%">
+        <menu text="File Menu">
+            <menu-item text="New" />
+            <menu-item text="Open..." />
+            <menu-item text="Save" />
+            <menu-item text="Save As..." />
+            <menu-separator />
+            <menu text="Recent">
+                <menu-item text="Dummy Item 1" />
+                <menu-item text="Dummy Item 2" />
+                <menu-item text="Dummy Item 3" />
+            </menu>
+            <menu-separator />
+            <menu-item text="Exit" />
+        </menu>
+
+        <menu text="Test Menu">
+            <menu text="Checkboxes">
+                <menu-checkbox text="Check 1" />
+                <menu-checkbox text="Check 2" selected="true" />
+                <menu-checkbox text="Check 3" />
+            </menu>	
+            <menu text="Optionboxes">
+                <menu-optionbox text="Option A1" />
+                <menu-optionbox text="Option A2" selected="true" />
+                <menu-optionbox text="Option A3" />
+                <menu-separator />
+                <menu-optionbox text="Option B1" group="B" />
+                <menu-optionbox text="Option B2" group="B" />
+                <menu-optionbox text="Option B3" group="B" selected="true" />
+            </menu>	
+            <menu text="Sub Menu">
+                <menu text="Sub Menu A">
+                    <menu text="Sub Menu A1">
+                        <menu-item text="Item A1-1" />
+                        <menu-item text="Item A1-2" />
+                        <menu-item text="Item A1-3" />
+                    </menu>
+                    <menu text="Sub Menu A2">
+                        <menu-item text="Item A2-1" />
+                        <menu-item text="Item A2-2" />
+                        <menu-item text="Item A2-3" />
+                    </menu>
+                    <menu text="Sub Menu A2">
+                        <menu-item text="Item A3-1" />
+                        <menu-item text="Item A3-2" />
+                        <menu-item text="Item A3-3" />
+                    </menu>
+                </menu>
+                <menu text="Sub Menu B">
+                    <menu text="Sub Menu B1">
+                        <menu-item text="Item B1-1" />
+                        <menu-item text="Item B1-2" />
+                        <menu-item text="Item B1-3" />
+                    </menu>
+                    <menu text="Sub Menu B2">
+                        <menu-item text="Item B2-1" />
+                        <menu-item text="Item B2-2" />
+                        <menu-item text="Item B2-3" />
+                    </menu>
+                    <menu text="Sub Menu B2">
+                        <menu-item text="Item B3-1" />
+                        <menu-item text="Item B3-2" />
+                        <menu-item text="Item B3-3" />
+                    </menu>
+                </menu>
+                <menu text="Sub Menu C">
+                    <menu text="Sub Menu C1">
+                        <menu-item text="Item C1-1" />
+                        <menu-item text="Item C1-2" />
+                        <menu-item text="Item C1-3" />
+                    </menu>
+                    <menu text="Sub Menu C2">
+                        <menu-item text="Item C2-1" />
+                        <menu-item text="Item C2-2" />
+                        <menu-item text="Item C2-3" />
+                    </menu>
+                    <menu text="Sub Menu C2">
+                        <menu-item text="Item C3-1" />
+                        <menu-item text="Item C3-2" />
+                        <menu-item text="Item C3-3" />
+                    </menu>
+                </menu>
+            </menu>
+        </menu>
+
+        <spacer width="100%" />
+        
+        <menu text="Help Menu">
+            <menu-item text="Help" />
+            <menu-item text="About..." />
+        </menu>
+    </menubar> 
+    
+    <vbox style="padding: 5px;">
+        <hbox>
+            <button text="Button" onclick="this.text='Thanks!'" tooltip="This is a tooltip" />
+            <button id="showDialog" text="Show Dialog" />
+            <dropdown width="100" selectedIndex="2">
+                <data>
+                    <item text="Item 1" />
+                    <item text="Item 2" />
+                    <item text="Item 3" />
+                    <item text="Item 4" />
+                    <item text="Item 5" />
+                    <item text="Item 6" />
+                </data>
+            </dropdown>
+            <progress pos="66" verticalAlign="center" />
+            <slider start="25" end="75" verticalAlign="center" />
+            <textfield text="Password" password="true" icon="icons/lock.png" />
+            <number-stepper pos="50" precision="2" />
+            <switch verticalAlign="center" />
+        </hbox>    
+        
+        <hbox>
+            <tabview width="400" height="300">
+                <vbox text="Page 1" width="100%" height="100%">
+                    <listview width="100%" height="100%">
+                        <item-renderer width="100%">
+                            <hbox width="100%">
+                                <checkbox id="checked" verticalAlign="center" />
+                                <label id="text" width="100%" verticalAlign="center" />
+                                <progress id="prog" verticalAlign="center" />
+                                <button text="Action" verticalAlign="center" />
+                            </hbox>
+                        </item-renderer>
+                        <data>
+                            <item text="Item 1" checked="true" prog="66" />
+                            <item text="Item 2" checked="true" prog="33" />
+                            <item text="Item 3" checked="false" prog="88" />
+                            <item text="Item 4" checked="false" prog="17" />
+                            <item text="Item 5" checked="true" prog="45" />
+                            <item text="Item 6" checked="true" prog="35" />
+                            <item text="Item 7" checked="false" prog="99" />
+                            <item text="Item 8" checked="true" prog="20" />
+                            <item text="Item 9" checked="true" prog="20" />
+                        </data>
+                    </listview>
+                    <dropdown width="100" selectedIndex="2">
+                        <data>
+                            <item text="Item 1" />
+                            <item text="Item 2" />
+                            <item text="Item 3" />
+                            <item text="Item 4" />
+                            <item text="Item 5" />
+                            <item text="Item 6" />
+                        </data>
+                    </dropdown>
+                </vbox>
+                <vbox text="Page 2">
+                    
+                </vbox>
+                <vbox text="Page 3">
+                    
+                </vbox>
+            </tabview>
+            
+            <listview width="200" height="300">
+                <item-renderer width="100%">
+                    <hbox width="100%">
+                        <label id="text" width="100%" verticalAlign="center" />
+                        <button text="Action" />
+                    </hbox>
+                </item-renderer>
+                <data>
+                    <item text="Item 1" />
+                    <item text="Item 2" />
+                    <item text="Item 3" />
+                    <item text="Item 4" />
+                    <item text="Item 5" />
+                    <item text="Item 6" />
+                    <item text="Item 7" />
+                    <item text="Item 8" />
+                    <item text="Item 9" />
+                    <item text="Item 10" />
+                    <item text="Item 11" />
+                    <item text="Item 12" />
+                    <item text="Item 13" />
+                    <item text="Item 14" />
+                    <item text="Item 15" />
+                </data>
+            </listview>
+            
+            <tabview width="300" height="300" closable="true">
+                <vbox text="Page 1" width="100%" height="100%">
+                    <tableview width="100%" height="100%">
+                        <header>
+                            <column id="colA" text="Column A" />
+                            <column id="colB" text="Column B" width="200" />
+                            <column id="colC" text="Column C" width="400" />
+                        </header>
+
+                        <data>
+                            <item colA="Item 1A" colB="Item 1B" colC="Item 1C" /> 
+                            <item colA="Item 2A" colB="Item 2B" colC="Item 2C" /> 
+                            <item colA="Item 3A" colB="Item 3B" colC="Item 3C" /> 
+                            <item colA="Item 4A" colB="Item 4B" colC="Item 4C" /> 
+                            <item colA="Item 5A" colB="Item 5B" colC="Item 5C" /> 
+                            <item colA="Item 6A" colB="Item 6B" colC="Item 6C" /> 
+                            <item colA="Item 7A" colB="Item 7B" colC="Item 7C" /> 
+                            <item colA="Item 8A" colB="Item 8B" colC="Item 8C" /> 
+                            <item colA="Item 9A" colB="Item 9B" colC="Item 9C" /> 
+                            <item colA="Item 10A" colB="Item 10B" colC="Item 10C" /> 
+                            <item colA="Item 11A" colB="Item 11B" colC="Item 11C" /> 
+                            <item colA="Item 12A" colB="Item 12B" colC="Item 12C" /> 
+                            <item colA="Item 13A" colB="Item 13B" colC="Item 13C" /> 
+                            <item colA="Item 14A" colB="Item 14B" colC="Item 14C" /> 
+                        </data>
+                    </tableview>
+                </vbox>
+                <vbox text="Page 2">
+                </vbox>
+                <vbox text="Page 3">
+                </vbox>
+                <vbox text="Page 4">
+                </vbox>
+                <vbox text="Page 5">
+                </vbox>
+                <vbox text="Page 6">
+                </vbox>
+                <vbox text="Page 7">
+                </vbox>
+            </tabview>
+            
+            <tabview height="300">
+                <vbox text="Page 1">
+                    <hbox>
+                        <vbox>
+                            <progress pos="0" />
+                            <progress pos="33" />
+                            <progress pos="66" />
+                            <progress pos="100" />
+                            
+                            <slider pos="0" />
+                            <slider pos="50" />
+                            <slider start="33" end="66" />
+                            
+                            <hbox>
+                                <checkbox text="Check 1" />
+                                <checkbox text="Check 2" selected="true" />
+                            </hbox>    
+                            <hbox>
+                                <optionbox text="Option 1" selected="true" />
+                                <optionbox text="Option 2" />
+                            </hbox>  
+                            
+                            <hbox>
+                                <number-stepper pos="50" precision="2" />
+                                <switch />
+                            </hbox>
+                        </vbox>    
+                        
+                        <vbox>
+                            <hbox>
+                                <vprogress pos="0" />
+                                <vprogress pos="33" />
+                                <vprogress pos="66" />
+                                <vprogress pos="100" />
+                                
+                                <vslider pos="0" />
+                                <vslider pos="50" />
+                                <vslider start="33" end="66" />
+                                
+                                <frame text="Frame">
+                                    <button text="Frame Contents" />
+                                </frame>
+                            </hbox>
+                            
+                            <hbox>
+                                <vbox>
+                                    <textfield placeholder="Enter password" icon="icons/lock.png" />
+                                    <textfield text="Textfield" icon="icons/user.png" />
+                                    <textfield text="Password" password="true" icon="icons/lock.png" />
+                                </vbox>
+                                
+                                <textarea text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum venenatis metus, eu hendrerit massa molestie sit amet. Aliquam eu ante dignissim, ullamcorper turpis id, ultrices ligula. Nullam congue augue varius lacus porta ultricies ut id tellus. Nulla facilisi. Sed quis justo accumsan, aliquam libero placerat, malesuada odio. Phasellus interdum sagittis vehicula. Aenean rhoncus purus enim, quis maximus sem laoreet non." />
+                            </hbox>
+                        </vbox>    
+                    </hbox>    
+                </vbox>
+                <vbox text="Page 2">
+                </vbox>
+                <vbox text="Page 3">
+                </vbox>
+            </tabview>
+        </hbox>    
+        
+        <hbox>
+            <style>
+                .dialog-content {
+                    padding: 0px;
+                }
+            </style>
+            <dialog id="testDialog" width="300" title="Dialog">
+                <vbox width="100%" style="padding: 5px;">
+                    <tabview width="100%">
+                        <vbox text="Page 1" width="100%">
+                            <scrollview width="100%" height="300">
+                                <grid columns="3">
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                    
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                    
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                    <button icon="haxeui-core/styles/default/haxeui.png" />
+                                </grid>
+                            </scrollview>
+                        </vbox>
+                        <vbox text="Page 2">
+                        </vbox>
+                        <vbox text="Page 3">
+                        </vbox>
+                    </tabview>
+                </vbox>
+            </dialog>   
+
+            <tabview>
+                <vbox text="Property Grid">
+                    <property-grid id="pg" width="250" height="300">
+                        <property-group text="Primary Group">
+                            <property id="stringProp" label="String Property" value="Value 1" />
+                            <property id="boolProp" label="Bool Property" type="boolean" value="true" />
+                            <property id="intProp" label="Int Property" type="int" value="101" />
+                            <property id="listProp" label="List Property" type="list" value="Item 1">
+                                <data>
+                                    <item value="Item 1" />
+                                    <item value="Item 2" />
+                                    <item value="Item 3" />
+                                    <item value="Item 4" />
+                                    <item value="Item 5" />
+                                    <item value="Item 6" />
+                                </data>
+                            </property>    
+                        </property-group>
+                        
+                        <property-group text="Secondary Group">
+                            <property label="String Property" value="Value 2" />
+                            <property label="Bool Property" type="boolean" value="false" />
+                            <property label="Int Property" type="int" value="102" />
+                            <property label="List Property" type="list" value="Item 2">
+                                <data>
+                                    <item value="Item 1" />
+                                    <item value="Item 2" />
+                                    <item value="Item 3" />
+                                    <item value="Item 4" />
+                                    <item value="Item 5" />
+                                    <item value="Item 6" />
+                                </data>
+                            </property>    
+                        </property-group>
+                        
+                        <property-group text="Tertiary Group">
+                            <property label="String Property" value="Value 3" />
+                            <property label="Bool Property" type="boolean" value="true" />
+                            <property label="Int Property" type="int" value="103" />
+                            <property label="List Property" type="list" value="Item 3">
+                                <data>
+                                    <item value="Item 1" />
+                                    <item value="Item 2" />
+                                    <item value="Item 3" />
+                                    <item value="Item 4" />
+                                    <item value="Item 5" />
+                                    <item value="Item 6" />
+                                </data>
+                            </property>    
+                        </property-group>
+                    </property-grid>
+                </vbox>
+            </tabview>
+            
+            <tabview tabPosition="top">
+                <vbox text="Calendar">
+                    <calendar-view />
+                </vbox>
+            </tabview>
+            
+            <frame>
+                <vbox text="Calendar">
+                    <calendar-view />
+                </vbox>
+            </frame>
+            
+            <style>
+                .dark-splitter {
+                    background-color: #252728;
+                    border: 1px solid #181a1b;
+                    filter: drop-shadow(1, 45, #000000, 0.2, 2, 2, 1, 3, true);
+                }
+                .dark-splitter111 {
+                    background-color: white;
+                    border: 1px solid #ABABAB;
+                    filter: drop-shadow(1, 45, #000000, 0.2, 2, 2, 1, 3, true);
+                }
+            </style>
+            
+            <tabview width="261" height="300" tabPosition="bottom" closable="true">
+                <vbox text="Splitters" width="100%" height="100%" style="padding: 5px;">
+                    <splitter direction="vertical" width="100%" height="100%">
+                        <splitter direction="horizontal" width="100%" height="33%">
+                            <box width="25%" height="100%" styleName="dark-splitter" />
+                            <box width="50%" height="100%" styleName="dark-splitter" />
+                            <box width="25%" height="100%" styleName="dark-splitter" />
+                        </splitter>
+                        <box width="100%" height="34%" styleName="dark-splitter" />
+                        <splitter direction="horizontal" width="100%" height="33%">
+                            <box width="50%" height="100%" styleName="dark-splitter" />
+                            <box width="50%" height="100%" styleName="dark-splitter" />
+                        </splitter>
+                    </splitter>
+                </vbox>
+                <vbox text="Page 2" />
+                <vbox text="Page 3" />
+            </tabview>
+        </hbox>
+    </vbox>  
+</vbox>
